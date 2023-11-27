@@ -1,0 +1,19 @@
+<p>binding works!</p>
+
+<!-- Two way Binding -->
+<p class="text-info">Two way Binding!!</p>
+
+<div class="card-group container p-2" >
+    <div class="card p-2">
+     <input type="text" value="{{value}}" [(ngModel)]="value">
+     <textarea name="" id="" cols="30" rows="10" class="m-2" [(ngModel)]="value" placeholder="Enter Your Name" >{{value}}</textarea>
+    </div>
+    <div class="card p-2">
+        <input type="text" value="{{value1}}" [(ngModel)]="value1">
+     <textarea name="" id="" cols="30" rows="10" class="m-2" placeholder="Enter Your Age" [(ngModel)]="value1">{{value}}</textarea>
+    </div>
+    <div class="card p-2 ">
+        <input type="text" value="{{value2}}" [(ngModel)]="value2">
+     <textarea name="" id="" cols="30" rows="10" class="m-2" [(ngModel)]="value2" placeholder="Enter Your Adress" >{{value2}}</textarea>
+    </div>
+  </div>

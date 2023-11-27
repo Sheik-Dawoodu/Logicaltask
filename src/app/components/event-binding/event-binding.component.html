@@ -1,0 +1,44 @@
+<p>event-binding works!</p>
+
+<h1 class="m-2 ">{{name}}</h1>
+<button class="btn btn-primary m-2" (click)="changedata()">Click To Change...</button>
+
+<div class="container">
+  <h4 >You have clicked {{clickCount}}</h4>
+<button (click)="count()" class="btn btn-primary" >Click Me!</button>
+</div>
+<div class="card-group container p-2">
+    <div class="card p-2">
+      <img src="https://img.freepik.com/premium-photo/desktop-with-computer-armchairfuturistic-modern-illustration-innovative-technologies-generative-ai_76964-9230.jpg?w=900" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+       
+        <!-- add & less button  -->
+        <div class="d-flex justify-content-start"><button class=" btn btn-warning" (click)="addbtn()">+<span>ADD</span></button>
+        <h5 class="value">{{increseCount}}</h5>
+        <button class=" btn btn-warning mr-5 lessbtn" (click)="lessbtn()"> - <span>less</span></button>
+      </div>
+    </div>
+        <!--  -->
+
+    </div>
+    <div class="card p-2">
+      <img src="https://img.freepik.com/premium-photo/devices-connected-storage-data-center-tablet-phone-home-devices-with-online-cloud-technology-computing-generative-ai_771426-1187.jpg?size=626&ext=jpg&ga=GA1.2.1800836108.1687485503&semt=sph" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+    <div class="card p-2 ">
+      <img src="https://img.freepik.com/free-photo/work-desk-with-computer-cup-with-pens-pencils-against-white-wall_181624-44978.jpg?size=626&ext=jpg&ga=GA1.2.1800836108.1687485503&semt=sph" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
