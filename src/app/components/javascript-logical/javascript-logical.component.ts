@@ -53,5 +53,6 @@ export class JavascriptLogicalComponent {
     {name:'Jerry',gender:'male',age:'25'},
     ];
     searchText:string = ''
-
+    maleList:string=''
+    
   }
