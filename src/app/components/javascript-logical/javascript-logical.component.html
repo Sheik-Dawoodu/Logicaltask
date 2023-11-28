@@ -14,15 +14,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let list of nameList | search:searchText; let i=index"  >
+                  <tr *ngFor="let list of nameList | search:searchText; let i=index "  >
                     <th scope="row">{{i+1}}</th>
                     <th scope="row">{{ list.name }}</th>
                     <td [ngStyle]="{'background-color':list.gender==='male'?'red':'green'}" class="text-light">{{ list.gender }}</td>
-                    <td>{{ list.age}}</td>
+                    <td scope="row" id="demo">{{ list.age}}</td>
                   </tr>
-                </tbody>
+                </tbody>  
               </table>
         </div>
-      </div>
+      </div>  
     </div>
   </div>

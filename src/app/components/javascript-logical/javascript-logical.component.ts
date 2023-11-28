@@ -1,4 +1,5 @@
 import { Component, } from '@angular/core';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-javascript-logical',
@@ -51,6 +52,6 @@ export class JavascriptLogicalComponent {
     {name:'Dennis',gender:'male',age:'22'},
     {name:'Jerry',gender:'male',age:'25'},
     ];
-    searchText:string=''
-  
+    searchText:string = ''
+
   }
