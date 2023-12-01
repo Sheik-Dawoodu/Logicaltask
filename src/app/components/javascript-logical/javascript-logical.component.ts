@@ -1,4 +1,4 @@
-import { Component, } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { __values } from 'tslib';
 
 @Component({
@@ -6,7 +6,7 @@ import { __values } from 'tslib';
   templateUrl: './javascript-logical.component.html',
   styleUrls: ['./javascript-logical.component.css']
 })
-export class JavascriptLogicalComponent { 
+export class JavascriptLogicalComponent implements OnInit{ 
 
   nameList = [
     {name:'James',gender:'male',age:'25'},
@@ -53,6 +53,24 @@ export class JavascriptLogicalComponent {
     {name:'Jerry',gender:'male',age:'25'},
     ];
     searchText:string = ''
-    maleList:string=''
+    malelist:any[]=[]
+    femalelist:any[]=[]
+
     
+    constructor(){
+    //  const male= this.nameList.filter(person=>person.gender ==="male")
+    //   console.log("male",male);
+    //  const female=this.nameList.filter(female=>female.gender ==="female")
+    //   console.log("female",female);
+    }
+    ngOnInit(): void {
+      this.nameList.forEach(item=>{
+        if(item.gender==='male'){
+          this.malelist.push(item)
+        }else if(item.gender==='female'){
+          this.femalelist.push(item)
+        }
+      })
+    }  
   }
+  

@@ -31,12 +31,11 @@
   <div class="row mt-5">
     <div class="col-sm-6 mb-3 mb-sm-0">
       <div class="card">
-        <h1><i class="bi-alarm"></i>Male Details</h1>
+        <h1> <i class="bi-alarm"></i> Male Details</h1>
         <div class="card-body">
-          <table class="table">
+          <table  class="table table-dark table-striped">
             <thead>
               <tr>
-               
                 <th scope="col">Name</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Age</th>
@@ -60,9 +59,9 @@
 
     <div class="col-sm-6">
       <div class="card">
-        <h1><i class="bi-alarm"></i>Female Details</h1>
+        <h1> <i class="bi-alarm"></i> Female Details</h1>
         <div class="card-body">
-          <table class="table">
+          <table  class="table table-dark table-striped">
             <thead>
               <tr>
                 <th scope="col">First</th>
@@ -72,6 +71,64 @@
             </thead>
             <tbody>
               <tr *ngFor="let item of nameList">
+              <ng-container *ngIf="item.gender==='female'">
+                <td>{{item.name}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.age}}</td>
+            </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <!-- Male details -->
+  <div class="row mt-5">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <h1> <i class="bi-alarm"></i> Male Details</h1>
+        <div class="card-body">
+          <table  class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of malelist;">
+              <ng-container *ngIf="item.gender==='male'"> 
+                <td>{{item.name}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.age}}</td>
+              </ng-container> 
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+<!-- female details  -->
+
+    <div class="col-sm-6">
+      <div class="card">
+        <h1> <i class="bi-alarm"></i> Female Details</h1>
+        <div class="card-body">
+          <table  class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of femalelist">
               <ng-container *ngIf="item.gender==='female'">
                 <td>{{item.name}}</td>
                 <td>{{item.gender}}</td>

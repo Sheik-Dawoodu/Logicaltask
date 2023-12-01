@@ -10,12 +10,6 @@ export class SearchPipe implements PipeTransform {
   transform(value:any,args: any): any {
     if(!value)return null
     if(!args) return value 
-    console.log("value");
-    console.log("args",args);
-    
-    
-
-    console.log('value', value, 'args', args);
 
     return value.filter((item:any)=>{
     return item.age >= args
