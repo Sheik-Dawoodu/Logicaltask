@@ -1,0 +1,61 @@
+<button type="button" class="btn btn-primary" (click)="addUser()">
+  Add User
+</button>
+<div class="d-flex justify-content-center">
+  <div class="card w-25">
+    <h5 class="card-header text-center">FORMS</h5>
+    <div class="card-body">
+      <form [formGroup]="userForm">
+        <div formArrayName="users">
+          <div
+            *ngFor="let user of users; let i = index"
+            [formGroupName]="i"
+            class="mb-3"
+          >
+            <label for="name">Name:</label>
+            <input type="text" formControlName="name" class="form-control" />
+
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" class="form-control" />
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input
+              type="text"
+              formControlName="phoneNumber"
+              class="form-control"
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control"
+            />
+
+            <button type="button" class="btn btn-success" (click)="onSubmit()">
+              Submit
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="removeUser(i)"
+            >
+              Remove User
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor="let user of userForm.value.users">
+  <div class="mt-3">
+    <strong>Name:</strong> {{ user.name }}<br>
+    <strong>Email:</strong> {{ user.email }}<br>
+    <strong>Phone Number:</strong> {{ user.phoneNumber }}<br>
+    <strong>Password:</strong> {{ user.password }}<br>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import { BindingComponent } from './components/binding/binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { GuardService } from 'src/service/guard.service';
 import { JavascriptLogicalComponent } from './components/javascript-logical/javascript-logical.component';
+import { FormArrayComponent } from './components/form-array/form-array.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'binding',component:BindingComponent},
   {path:'eventBinding',component:EventBindingComponent,canActivate:[GuardService]},
   {path:'javascript-logical',component:JavascriptLogicalComponent},
+  {path:'formarray',component:FormArrayComponent},
   {path:'blog',loadChildren:()=> import('./blog/blog.module').then(m => m.BlogModule)}
 ];
 @NgModule({

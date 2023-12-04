@@ -73,4 +73,3 @@ export class JavascriptLogicalComponent implements OnInit{
       })
     }  
   }
-  
